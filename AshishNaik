@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashish Naik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f3ef;
+    --panel:#ffffff;
+    --line:#e2e0d8;
+    --text:#22261f;
+    --muted:#666a61;
+    --muted-2:#93968c;
+    --accent:#3d5c46;
+    --accent-soft:#e2ebe3;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;
+  }
+  h1,h2,h3{font-family:'Newsreader',serif;margin:0;font-weight:500;}
+  a{color:inherit;}
+  ::selection{background:var(--accent-soft);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+
+  header{padding:26px 0;border-bottom:1px solid var(--line);}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;}
+  .brand{
+    width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Newsreader',serif;font-size:0.95rem;
+  }
+  .navlinks{display:flex;gap:26px;font-size:0.92rem;color:var(--muted);}
+  .navlinks a{text-decoration:none;}
+  .navlinks a:hover{color:var(--text);}
+  @media(max-width:560px){.navlinks{display:none;}}
+
+  section{padding:52px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+
+  .hero h1{font-size:clamp(2.1rem,6vw,2.8rem);font-weight:500;line-height:1.2;}
+  .hero .role{margin-top:8px;color:var(--muted);font-size:1.05rem;}
+  .hero .meta{margin-top:14px;color:var(--muted-2);font-size:0.9rem;}
+  .hero .cta-row{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:11px 22px;border-radius:8px;font-size:0.92rem;
+    text-decoration:none;border:1px solid var(--line);font-family:'Inter',sans-serif;
+  }
+  .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .btn.primary:hover{background:#324a3a;}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  .now-card{
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:22px 24px;display:flex;align-items:center;gap:16px;
+  }
+  .now-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+  .now-card .eyebrow{font-size:0.76rem;color:var(--muted-2);text-transform:uppercase;letter-spacing:0.07em;}
+  .now-card p{margin:4px 0 0;font-size:0.98rem;}
+
+  h2.title{font-size:1.3rem;font-weight:500;margin-bottom:16px;}
+  .about p{color:var(--text);max-width:600px;}
+
+  .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;}
+  .skill{
+    padding:8px 14px;border:1px solid var(--line);border-radius:999px;
+    font-size:0.88rem;color:var(--text);background:var(--panel);font-family:'Inter',sans-serif;
+  }
+
+  .project{padding:20px 0;border-top:1px solid var(--line);}
+  .project:first-of-type{border-top:none;}
+  .project-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;}
+  .project h3{font-size:1.12rem;font-weight:500;}
+  .project .tag{font-size:0.78rem;color:var(--muted-2);font-family:'Inter',sans-serif;}
+  .project p{margin-top:8px;color:var(--muted);font-size:0.95rem;max-width:580px;}
+  .project a.link{
+    display:inline-block;margin-top:8px;font-size:0.88rem;color:var(--accent);
+    text-decoration:none;border-bottom:1px solid var(--accent-soft);font-family:'Inter',sans-serif;
+  }
+  .project a.link:hover{border-color:var(--accent);}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media(max-width:560px){.split{grid-template-columns:1fr;}}
+  .split h3{font-size:0.9rem;color:var(--muted-2);font-weight:600;margin-bottom:12px;font-family:'Inter',sans-serif;}
+
+  .contact-list{margin-top:6px;display:flex;flex-direction:column;gap:10px;font-size:0.95rem;}
+  .contact-list a{text-decoration:none;color:var(--accent);}
+  .contact-list a:hover{text-decoration:underline;}
+  .contact-list .k{color:var(--muted-2);display:inline-block;width:90px;font-size:0.85rem;font-family:'Inter',sans-serif;}
+
+  footer{padding:26px 0;text-align:center;color:var(--muted-2);font-size:0.85rem;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">AN</div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Hi, I'm Ashish.</h1>
+    <p class="role">4th-year VLSI Engineering student, Goa, India</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn ghost" href="mailto:ashishnaikbackup@gmail.com?subject=Hey%20Ashish">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="now-card">
+      <span class="now-dot"></span>
+      <div>
+        <div class="eyebrow">Internship</div>
+        <p>Interning at Fluxatic Global, as part of the Bridge Aura Internship Program — 2 months.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="title">About</h2>
+    <div class="about">
+      <p>I'm currently in my 4th year of B.E. in VLSI Design &amp; Technology at Government Engineering College, Goa.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2 class="title">Projects</h2>
+
+    <div class="project">
+      <div class="project-top">
+        <h3>TrueMailer</h3>
+        <span class="tag">GitHub project</span>
+      </div>
+      <p>A web-based tool that detects temporary and disposable email addresses.</p>
+      <a class="link" href="https://truemailer.github.io/website/" target="_blank" rel="noopener">Visit site →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-top">
+        <h3>Number System Converter</h3>
+        <span class="tag">GitHub project</span>
+      </div>
+      <p>A small tool for converting values between binary, decimal, octal, and hexadecimal.</p>
+      <a class="link" href="https://github.com/ashishnaikbackup/number-system-converter" target="_blank" rel="noopener">View repo →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-top">
+        <h3>Orderly</h3>
+        <span class="tag">GitHub project</span>
+      </div>
+      <p>A project in progress — the repo is up on GitHub.</p>
+      <a class="link" href="https://github.com/ashishnaikbackup/Orderly" target="_blank" rel="noopener">View repo →</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <h3>Strengths</h3>
+      <div class="skills">
+        <span class="skill">Quick Learner</span>
+        <span class="skill">Teamwork</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Consistent &amp; Dedicated</span>
+      </div>
+    </div>
+    <div>
+      <h3>Languages</h3>
+      <div class="skills">
+        <span class="skill">English</span>
+        <span class="skill">Hindi</span>
+        <span class="skill">Konkani</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="title">Get in touch</h2>
+    <div class="contact-list">
+      <div><span class="k">Email</span><a href="mailto:ashishnaikbackup@gmail.com">ashishnaikbackup@gmail.com</a></div>
+      <div><span class="k">Phone</span><a href="tel:+919284505638">+91 92845 05638</a></div>
+      <div><span class="k">WhatsApp</span><a href="https://wa.me/919284505638" target="_blank" rel="noopener">wa.me/919284505638</a></div>
+      <div><span class="k">GitHub</span><a href="https://github.com/ashishnaikbackup" target="_blank" rel="noopener">github.com/ashishnaikbackup</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Ashish Naik</footer>
+
+</body>
+</html>
