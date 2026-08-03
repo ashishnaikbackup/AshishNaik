@@ -9,7 +9,7 @@ This site has a short intro, my projects, and contact details.
 
 ## Live site
 
-https://ashishnaikbackup.github.io
+[https://ashishnaikbackup.github.io](https://ashishnaikbackup.github.io/AshishNaik/)
 
 ## Built with
 
